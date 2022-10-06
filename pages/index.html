@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		links
+		weather
+		<form name="searchSubmit" id="searchSubmit" action="/search" method="post">
+			<!-- CUSTOMER RADIO BUTTONS -->
+
+					<form action="#customerForm" >
+						
+						<div id="searchCustomers">
+
+							<!-- CUSTOMER OPTION -->
+							<div id="customerOption">
+								<select name="customerName" id="customerName" value="{{searchOptions}}" >
+									<!-- onchange="document.searchSubmit.action=this.value;" -->
+									
+									<option name="estes" value="estes" selected="{{searchOptions === this.value}}">Estes</option>
+									<option name="odfl" value="odfl" selected="{{searchOptions === this.value}}">ODFL</option>
+									<option name="saia" value="saia" selected="{{searchOptions === this.value}}">SAIA</option>
+									<option value="selectOption" name="selectOption" selected disabled hidden>Select Option</option>
+									
+								</select>
+							</div>
+							
+							<h1>CUSTOMER SITE LOOKUP</h1>
+						
+							<!-- RADIO BUTTONS FOR CUSTOMER -->
+							<!-- <input type="radio" id="customer1" name="customerName" value="estes" />
+							<label for="customer1"><img src="../../public/images/estes.png" alt="Estes Logo"></label>
+							<input type="radio" id="customer2" name="customerName" value="odfl" />
+							<label for="customer2"><img src="../../public/images/Old_Dominion_Freight_Line,_Inc._Logo.png" alt="ODFL Logo"></label>
+							<input type="radio" id="customer3" name="customerName" value="saia" />
+							<label for="customer3"><img src="../../public/images/Saia_logo.svg.png" alt="SAIA Logo"></label>
+						</div> -->
+
+						<!-- DROPDOWN MENU FOR CUSTOMER CHOICE -->
+						
+
+						<div id="searchCustomers">
+							<select name="searchOptions" id="searchOptions">
+								<option value="termName">Terminal Name</option>
+								<option value="alphaCode">alphaCode</option>
+								<option value="TermNum">Terminal Number</option>
+								<option value="city">City</option>
+								<option value="state">State</option>
+							</select>
+						</div>
+
+					
+
+			<input type="text" id="searchForm" name="search" value="search" />
+			<input type="submit">Submit</input>
+		</form>
+		<h1>It's a weekday!</h1>
+		<p>Why are you not working!</p>
+	</body>
+	<script src="/app.js"></script>
+	<script src="/views/index.ejs"></script>
+	<script src="/public/javascripts/formulas.js"></script>
+</html>

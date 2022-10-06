@@ -1,0 +1,68 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>Wireless Equipment Remediation Steps</h1>
+	<h2>Use when card reader will not process transactions or respond to card being swiped</h2>
+	<ol>
+		<li>
+			Connect to Estes network
+			<ol type="a">
+				<li>Try to ping IP address 10.3.xxx.27 (use specific address)</li>
+				<li>
+					If ok, try to ping IP address 10.xx.xxx.28 & 10.xx.xxx.25 (use site specific address)
+				</li>
+				<li>If no response > proceed to step 2</li>
+				<li>
+					If positive response > site may need to clean or change mag reader or cycle power to ICU
+				</li>
+			</ol>
+		</li>
+		<li>
+			Have site power down (in the following order):
+			<ol type="a">
+				<li>POE</li>
+				<li>Lantronix</li>
+				<li>Card Reader</li>
+			</ol>
+		</li>
+		<li>
+			Open web browser
+			<ol type="a">
+				<li>Type IP address 10.xx.xxx.27 in browser window (use site specific address)</li>
+				<li>
+					Login into device
+					<ol type="i">
+						<li>Log in: Airaya</li>
+						<li>Password: Airaya</li>
+					</ol>
+				</li>
+				<li>Click on "Network" tab</li>
+				<li>Click on "REBOOT" - wait 65 seconds</li>
+			</ol>
+		</li>
+		<li>
+			After reboot - tell site POC to power up equipment (in the following order):
+			<ol type="a">
+				<li>POE</li>
+				<li>Lantronix</li>
+				<li>Card Reader</li>
+			</ol>
+		</li>
+		<li>Wait approximately 5 minutes for Lantronix to re-establish communication.</li>
+		<li>
+			Try to ping all IP addresses at site:
+			<ol type="a">
+				<li>
+					10.3.xxx.25, 10.3.xxx.26, 10.3.xxx.27
+					<ol type="i">
+						<li>If all okay - Proceed to step 7</li>
+						<li>If not okay - perform steps 2-4 again.</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>Ensure dial-in capabilities to the card reader.</li>
+		<li>Ask site what card reader says.</li>
+		<li>Have site test card reader with fuel card.</li>
+	</ol>
+</body>

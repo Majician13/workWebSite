@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		<div class="box" id="items">
+			<h1>customerName</h1>
+
+			<div class="items" id="itemHeader">
+				<p>
+					<button
+						class="btn btn-primary"
+						type="button"
+						data-bs-parent="items"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						<h1>Terminal Name #Terminal Number AlphaCode</h1>
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body">
+						Some placeholder content for the collapse component. This panel is hidden by default but
+						revealed when the user activates the relevant trigger.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- BASIC FORM -->
+		<div class="box">
+			<div class="item">
+				<h1>terminal name</h1>
+				<li>alpha code</li>
+				<li>terminal number</li>
+				<address>streetAddress city state zip phone</address>
+				<li>terminalManager</li>
+				<li>opwIcuSci</li>
+				<li>crdRdrIp</li>
+				<li>crdRdrPort</li>
+				<li>atgIp</li>
+				<li>atgPort</li>
+				<li>fsc</li>
+				<li>fscPort</li>
+				<li>fscLogin</li>
+				<li>fscPassword</li>
+				<li>vendor1</li>
+				<li>vendor1Phone</li>
+				<li>vendor1Email</li>
+				<li>vendor2</li>
+				<li>vendor2Phone</li>
+				<li>vendor2Email</li>
+				<li>notes</li>
+				<li>dispMan</li>
+				<li>dispMod</li>
+				<li>curbHoseLength</li>
+				<li>swivelPn</li>
+				<li>bwayPn</li>
+				<li>fuelFiltPn</li>
+				<li>manholeCoverDiam</li>
+				<li>numOfManholeCover</li>
+				<li>otherItems</li>
+				<li>folder</li>
+			</div>
+		</div>
+		<!-- BACK BUTTON -->
+		<form>
+			<input type="button" value="Go back!" onclick="history.back()" />
+		</form>
+	</body>
+	<script
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"
+	></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+		integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+		crossorigin="anonymous"
+	></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+		integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+		crossorigin="anonymous"
+	></script>
+
+	<script src="/app.js"></script>
+	<script src="/views/search.ejs"></script>
+	<script src="/views/advancedSearch.ejs"></script>
+</html>

@@ -1,0 +1,34 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>T-Check Error Codes</h1>
+	<ul>
+		<li><strong>sh sys</strong> – Show System – Shows PCTs, Status, Time/Date, and FITs</li>
+		<li><strong>sh site</strong> – Show Site – Shows site</li>
+		<li><strong>Login OPWTECH (or TECH)</strong> – Username to login</li>
+		<li><strong>1PV2opwfms</strong> – password to use with Login OPWTECH (or TECH)</li>
+		<li>
+			<strong>install pct 1 pos 1</strong> – installs pct 1 pos 1 if locked out (as shown by
+			parenthesis around number when using sh sys)
+		</li>
+		<li>
+			<strong>remove pct 1</strong> – Uninstalls pct 1 from FSC. This may be required if card reader
+			continuously requests pump #. Removing and then reinstalling pct is a common resolution.
+		</li>
+		<li><strong>install pct 1</strong> – Installs/re-installs pct 1</li>
+		<li>
+			<strong>sh trans where date = 091222 (and time > 1600)</strong> – used to print to screen all
+			transactions for the date 09/12/22 (optional time is greater than, to show only trans after a
+			certain time on specified date).
+		</li>
+		<li><strong>set time</strong> – used to set FSC to proper time.</li>
+		<li><strong>set date</strong> – used to set FSC to proper date.</li>
+	</ul>
+
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+	<script src="/views/tCheckError.ejs"></script>
+</body>
+<%- include("footer.ejs") %>

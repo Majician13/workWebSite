@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		<!-- BASIC FORM -->
+		<div class="box">
+			<div class="item">
+				<h1>terminal name</h1>
+				<li>alpha code</li>
+				<li>terminal number</li>
+				<address>streetAddress city state zip phone</address>
+				<li>terminalManager</li>
+				<li>opwIcuSci</li>
+				<li>crdRdrIp</li>
+				<li>crdRdrPort</li>
+				<li>atgIp</li>
+				<li>atgPort</li>
+				<li>fsc</li>
+				<li>fscPort</li>
+				<li>fscLogin</li>
+				<li>fscPassword</li>
+				<li>vendor1</li>
+				<li>vendor1Phone</li>
+				<li>vendor1Email</li>
+				<li>vendor2</li>
+				<li>vendor2Phone</li>
+				<li>vendor2Email</li>
+				<li>notes</li>
+				<li>dispMan</li>
+				<li>dispMod</li>
+				<li>curbHoseLength</li>
+				<li>swivelPn</li>
+				<li>bwayPn</li>
+				<li>fuelFiltPn</li>
+				<li>manholeCoverDiam</li>
+				<li>numOfManholeCover</li>
+				<li>otherItems</li>
+				<li>folder</li>
+			</div>
+		</div>
+		<div class="col">
+			<h2>TroubleShooting</h2>
+			<% if (item.opwIcuSci == 'OPW'){ %>
+			<a href="/dipSwitch.html">K800 Dip Switch Settings</a>
+			<% } %>
+		</div>
+		<!-- BACK BUTTON -->
+		<form>
+			<input type="button" value="Go back!" onclick="history.back()" />
+		</form>
+	</body>
+	<script src="/app.js"></script>
+	<script src="/views/search.ejs"></script>
+</html>

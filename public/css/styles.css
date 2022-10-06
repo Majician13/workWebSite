@@ -1,0 +1,151 @@
+.items h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+}
+
+.items:empty {
+	display: none;
+}
+
+div {
+	text-align: center;
+}
+
+p {
+	color: #00008b;
+}
+
+body {
+	background-color: #95c2de;
+}
+
+.mainbox {
+	background-color: #95c2de;
+	margin: auto;
+	height: 600px;
+	width: 600px;
+	position: relative;
+}
+
+.err {
+	color: #ffffff;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 11rem;
+	position: absolute;
+	left: 20%;
+	top: 8%;
+}
+
+.far {
+	position: absolute;
+	font-size: 8.5rem;
+	left: 42%;
+	top: 15%;
+	color: #ffffff;
+}
+
+.err2 {
+	color: #ffffff;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 11rem;
+	position: absolute;
+	left: 68%;
+	top: 8%;
+}
+
+.msg {
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 1.6rem;
+	position: absolute;
+	left: 16%;
+	top: 45%;
+	width: 75%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.danger {
+	color: red;
+}
+
+#beaLogo {
+	align-items: center;
+	width: 20%;
+	height: 20%;
+}
+
+.indexTable {
+	table-layout: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+
+tbody {
+	margin: 0 0 0 0;
+}
+
+.containerWrap {
+	width: 100%;
+}
+
+.tableTr {
+	width: 100%;
+}
+
+.mainTd {
+	width: 25%;
+	top: 0px;
+}
+
+.mainTr {
+	top: 0px;
+}
+
+tbody {
+	top: 0px;
+}
+
+.searchTr {
+	width: 100%;
+}
+
+.welcomeTd {
+	width: 75%;
+}
+
+.sidebar {
+	width: 15%;
+}
+
+footer {
+	text-align: center;
+}
+
+.bodyTable {
+	width: 100%;
+}
+
+.indexSep {
+	width: 50%;
+}
+
+.mainBody {
+	top: 0;
+}
+
+.bodyTable {
+	top: 0;
+}

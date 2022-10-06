@@ -1,0 +1,36 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>Common Veeder Root Commands</h1>
+	<ul>
+		<li><strong>^AI20700</strong> – CSLD Test Report</li>
+		<li><strong>^AI90200</strong> – What Tests Are Run</li>
+		<li><strong>^AI20200</strong> – Delivery Report</li>
+		<li><strong>^AI70200</strong> – Alarm Details</li>
+		<li><strong>^AI10100</strong> – Currently Active Alarms</li>
+		<li><strong>^AI11100</strong> – Alarms History</li>
+		<li><strong>^A200</strong> – Amt in Tanks</li>
+		<li>
+			<strong>^AS611TTDDRMYYMMDDHHmm</strong> –
+			<p>MMWDHHmm (if M=2)</p>
+			<p>WDHHmm (if M=3)</p>
+			<p>DHHmm (if M=4)</p>
+			<p>HHmm</p>
+
+			Notes:
+			<ol>
+				<li>YYMMDDHHmm - Current Date and Time</li>
+				<li>TT - Tank Number (Decimal, 00=all)</li>
+				<li>DD - Leak test Duration in hours (2 <= DD <= 24)</li>
+				<li>R - Leak test Rate (0=0.2, 1=0.1)</li>
+			</ol>
+		</li>
+		<li><strong>^AI30100</strong> – Liquid Status</li>
+	</ul>
+
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+<%- include("footer.ejs") %>

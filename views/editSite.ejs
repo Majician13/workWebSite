@@ -1,0 +1,87 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>Edit/Add Site</h1>
+	if (advancedOptions == 'edit'){
+	<form action="/search" method="post">Edit searched for site</form>
+	} else if (advancedOptions == 'add'){
+	<form action="/search" method="post">
+		<label for="customerName">Customer Name</label>
+		<input type="text" name="customerName" />
+		<label for="terminalName">Terminal Name</label>
+		<input type="text" name="terminalName" />
+		<label for="terminalNum">Terminal Number</label>
+		<input type="text" name="terminalNumber" />
+		<label for="AlphaCode">Alphacode</label>
+		<input type="text" name="AlphaCode" />
+		<label for="streetAddress">Street Address</label>
+		<input type="text" name="streetAddress" />
+		<label for="city">City</label>
+		<input type="text" name="city" />
+		<label for="state">State</label>
+		<input type="text" name="state" />
+		<label for="zip">Zip Code</label>
+		<input type="text" name="zip" />
+		<label for="phone">Terminal Phone Number</label>
+		<input type="text" name="phone" />
+		<label for="terminalManager">Terminal Manager</label>
+		<input type="text" name="terminalManager" />
+		<label for="vendor1">Vendor 1</label>
+		<input type="text" name="vendor1" />
+		<label for="vendor1Phone">Vendor 1 Phone Number</label>
+		<input type="text" name="vendor1Phone" />
+		<label for="vendor1Email">Vendor 1 Email</label>
+		<input type="text" name="vendor1Email" />
+		<label for="vendor2">Vendor 2</label>
+		<input type="text" name="vendor2" />
+		<label for="vendor2Phone">Vendor 2 Phone Number</label>
+		<input type="text" name="vendor2Phone" />
+		<label for="vendor2Email">Vendor 2 Email</label>
+		<input type="text" name="vendor2Email" />
+		<label for="opwIcuSci">OPW/ICU/SCI</label>
+		<input type="text" name="opwIcuSci" />
+		<label for="crdRdrIp">Card Reader IP</label>
+		<input type="text" name="crdRdrIp" />
+		<label for="crdRdrPort">Card Reader Port</label>
+		<input type="text" name="crdRdrPort" />
+		<label for="atgIp">ATG IP</label>
+		<input type="text" name="atgIp" />
+		<label for="atgPort">ATG Port</label>
+		<input type="text" name="atgPort" />
+		<label for="fsc">FSC IP</label>
+		<input type="text" name="fsc" />
+		<label for="fscPort">FSC Port</label>
+		<input type="text" name="fscPort" />
+		<label for="fscLogin">FSC Login</label>
+		<input type="text" name="fscLogin" />
+		<label for="fscPassword">FSC Password</label>
+		<input type="text" name="fscPassword" />
+		<label for="notes">Notes</label>
+		<textarea name="notes" cols="30" rows="10">Notes</textarea>
+		<label for="dispMan">Dispenser Manufacturer</label>
+		<input type="text" name="dispMan" />
+		<label for="dispMod">Dispenser Model</label>
+		<input type="text" name="dispMod" />
+		<label for="curbHoseLength">Curb Hose Length</label>
+		<input type="text" name="curbHoseLength" />
+		<label for="swivelPn">Swivel Part Number</label>
+		<input type="text" name="swivelPn" />
+		<label for="bwayPn">Breakaway Part Number</label>
+		<input type="text" name="bwayPn" />
+		<label for="fuelFiltPn">Fuel Filter Part Number</label>
+		<input type="text" name="fuelFiltPn" />
+		<label for="manholeCoverDiam">Manhole Cover Diameter</label>
+		<input type="text" name="manholeCoverDiam" />
+		<label for="numOfManholeCover">Number of Manhole Covers</label>
+		<input type="text" name="numOfManholeCover" />
+		<label for="otherItems">Other Items</label>
+		<input type="text" name="otherItems" />
+	</form>
+	}
+
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+<%- include("footer.ejs") %>

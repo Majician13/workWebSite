@@ -1,0 +1,713 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>T-Check Error Codes</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Err #</th>
+				<th scope="col">Error MSG</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>185</td>
+				<td>REVERIFICATION MESAGE PLACE HOLDER</td>
+			</tr>
+            <tr>
+				<td>401</td>
+				<td>CUST/CARD NUMBER CANNOT BE ZERO</td>
+			</tr>
+            <tr>
+				<td>402</td>
+				<td>PRODUCT TOTAL CANNOT BE ZERO</td>
+			</tr>
+            <tr>
+				<td>403</td>
+				<td>OTHER 1 COST INVALID</td>
+			</tr>
+            <tr>
+				<td>404</td>
+				<td>OTHER 2 COST INVALID</td>
+			</tr>
+            <tr>
+				<td>405</td>
+				<td>NON NUMERIC CHAR IN SALES TAX FIELD</td>
+			</tr>
+            <tr>
+				<td>406</td>
+				<td>FUEL AMT MUST BE ZERO IF GALLS ZERO</td>
+			</tr>
+            <tr>
+				<td>407</td>
+				<td>NEED PRODUCT CODE FOR OTHER 1 AMOUNT</td>
+			</tr>
+            <tr>
+				<td>408</td>
+				<td>NEED PRODUCT CODE FOR OTHER 2 AMOUNT</td>
+			</tr>
+            <tr>
+				<td>409</td>
+				<td>INVALID FUEL CODE</td>
+			</tr>
+            <tr>
+				<td>410</td>
+				<td>NEED AMOUNT FOR FUEL CODE 2</td>
+			</tr>
+            <tr>
+				<td>411</td>
+				<td>DUPLICATE FUEL CODE</td>
+			</tr>
+            <tr>
+				<td>412</td>
+				<td>INVOICE AMT NOT EQUAL TO PRODUCT TOT</td>
+			</tr>
+            <tr>
+				<td>413</td>
+				<td>INVOICE AMT NOT EQUAL TO PRODUCT TOT</td>
+			</tr>
+            <tr>
+				<td>414</td>
+				<td>AMOUNT EXCEEDS POS LIMIT-VOICE AUTH</td>
+			</tr>
+            <tr>
+				<td>415</td>
+				<td>INVALID INVOICE NUMBER</td>
+			</tr>
+            <tr>
+				<td>416</td>
+				<td>MESAGE PLACE HOLDER</td>
+			</tr>
+            <tr>
+				<td>417</td>
+				<td>NONHWY QUANTITY OR COST INVALID</td>
+			</tr>
+            <tr>
+				<td>418</td>
+				<td>OIL QUANTITY OR OIL COST INVALID</td>
+			</tr>
+            <tr>
+				<td>419</td>
+				<td>INVALID OTHER 1 PRODUCT CODE</td>
+			</tr>
+            <tr>
+				<td>420</td>
+				<td>INVALID OTHER 1 PRODUCT COST</td>
+			</tr>
+            <tr>
+				<td>421</td>
+				<td>INVALID OTHER 2 PRODUCT CODE</td>
+			</tr>
+            <tr>
+				<td>422</td>
+				<td>INVALID OTHER 2 PRODUCT COST</td>
+			</tr>
+            <tr>
+				<td>423</td>
+				<td>INVALID TCHEK SITE NUMBER</td>
+			</tr>
+            <tr>
+				<td>424</td>
+				<td>SITE NOT ACTIVE</td>
+			</tr>
+            <tr>
+				<td>425</td>
+				<td>DRAFT NOT ALLOWED FOR THIS SITE</td>
+			</tr>
+            <tr>
+				<td>426</td>
+				<td>ACCOUNT NOT ON FILE</td>
+			</tr>
+            <tr>
+				<td>427</td>
+				<td>ACCOUNT NOT ACTIVE</td>
+			</tr>
+            <tr>
+				<td>428</td>
+				<td>CARD MUST BE SWIPED</td>
+			</tr>
+            <tr>
+				<td>429</td>
+				<td>HUB READING REQUIRED</td>
+			</tr>
+            <tr>
+				<td>430</td>
+				<td>PO NOT AUTHORIZED FOR THIS PRODUCT</td>
+			</tr>
+            <tr>
+				<td>431</td>
+				<td>PO ALREADY USED</td>
+			</tr>
+            <tr>
+				<td>432</td>
+				<td>INVALID CARD NUMBER</td>
+			</tr>
+            <tr>
+				<td>433</td>
+				<td>CARD NOT ON CARD MASTER</td>
+			</tr>
+            <tr>
+				<td>434</td>
+				<td>CARD HAS EXPIRED</td>
+			</tr>
+            <tr>
+				<td>435</td>
+				<td>DRIVER ID NOT ON FILE</td>
+			</tr>
+            <tr>
+				<td>436</td>
+				<td>CARD NOT ACTIVE</td>
+			</tr>
+            <tr>
+				<td>437</td>
+				<td>CARD STATUS IS LOST, CDL REQUIRED</td>
+			</tr>
+            <tr>
+				<td>438</td>
+				<td>UNIT/TRACTOR NUMBER REQUIRED</td>
+			</tr>
+            <tr>
+				<td>439</td>
+				<td>TRIP NUMBER REQUIRED</td>
+			</tr>
+            <tr>
+				<td>440</td>
+				<td>INVALID TRIP NUMBER</td>
+			</tr>
+            <tr>
+				<td>441</td>
+				<td>INVALID UNIT/TRACTOR NUMBER</td>
+			</tr>
+            <tr>
+				<td>442</td>
+				<td>MAXIMUM DISTANCE ALLOWED EXCEEDED</td>
+			</tr>
+            <tr>
+				<td>443</td>
+				<td>MINIMUM DISTANCE NOT TRAVELED</td>
+			</tr>
+            <tr>
+				<td>444</td>
+				<td>PRODUCT IS RESTRICTED CANNOT AUTH</td>
+			</tr>
+            <tr>
+				<td>445</td>
+				<td>PRODUCT IS NOT AUTHORIZED</td>
+			</tr>
+            <tr>
+				<td>446</td>
+				<td>SITE OUT OF NETWORK</td>
+			</tr>
+            <tr>
+				<td>447</td>
+				<td>SITE NOT LONGER ACTIVE FOR NETWORK</td>
+			</tr>
+            <tr>
+				<td>448</td>
+				<td>FUEL VOL MUST BE MORE THAN STOP MIN</td>
+			</tr>
+            <tr>
+				<td>449</td>
+				<td>FUEL VOL MUST BE LESS THAN STOP MAX</td>
+			</tr>
+            <tr>
+				<td>450</td>
+				<td>DRAFT NUMBER IS REQUIRED</td>
+			</tr>
+            <tr>
+				<td>451</td>
+				<td>CALL T-CHEK, CUSTOMER NOT ACTIVE</td>
+			</tr>
+            <tr>
+				<td>452</td>
+				<td>CUSTOMER NOT ACTIVE</td>
+			</tr>
+            <tr>
+				<td>453</td>
+				<td>DRIVER CALL COMPANY</td>
+			</tr>
+            <tr>
+				<td>454</td>
+				<td>TRAILER NUMBER REQUIRED</td>
+			</tr>
+            <tr>
+				<td>455</td>
+				<td>TRAILER NUMBER NOT ON FILE</td>
+			</tr>
+            <tr>
+				<td>456</td>
+				<td>DRIVER CDL REQUIRED</td>
+			</tr>
+            <tr>
+				<td>457</td>
+				<td>DRIVER CDL NOT ON FILE</td>
+			</tr>
+            <tr>
+				<td>458</td>
+				<td>DRIVER FILE ERROR - CALL T-CHEK</td>
+			</tr>
+            <tr>
+				<td>459</td>
+				<td>DRIVER ID IS REQUIRED</td>
+			</tr>
+            <tr>
+				<td>460</td>
+				<td>DUPLICATE INVOICE FOR THIS SITE</td>
+			</tr>
+            <tr>
+				<td>461</td>
+				<td>SAME CARD SAME PROD WITHIN TIME LIMT</td>
+			</tr>
+            <tr>
+				<td>462</td>
+				<td>OIL IS RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>463</td>
+				<td>OIL NOT AUTHORIZED/PO REQUIRED</td>
+			</tr>
+            <tr>
+				<td>464</td>
+				<td>CASH IS RESTRICTED CANNOT AUTHORIZE</td>
+			</tr>
+            <tr>
+				<td>465</td>
+				<td>CASH IS NOT AUTHORIZED CALL CO</td>
+			</tr>
+            <tr>
+				<td>466</td>
+				<td>CASH EXCEEDS ACCT MAX CASH LIMIT</td>
+			</tr>
+            <tr>
+				<td>467</td>
+				<td>TOTAL PURCHASE EXCEEDS CARD LIMIT</td>
+			</tr>
+            <tr>
+				<td>468</td>
+				<td>FUEL EXCEEDS STOP VOLUME LIMIT</td>
+			</tr>
+            <tr>
+				<td>469</td>
+				<td>MILES PER GALLON NOT WITHIN CUSTOMER</td>
+			</tr>
+            <tr>
+				<td>470</td>
+				<td>FUEL EXCEEDS TRANS VOLUME LIMIT</td>
+			</tr>
+            <tr>
+				<td>471</td>
+				<td>EXCEEDS TRIP LIMIT</td>
+			</tr>
+            <tr>
+				<td>472</td>
+				<td>EXCEEDS FUEL VOLUME LIMIT</td>
+			</tr>
+            <tr>
+				<td>473</td>
+				<td>EXCEEDS TRAILER FUEL VOLUME LIMIT</td>
+			</tr>
+            <tr>
+				<td>474</td>
+				<td>EXCEEDS TRAILER DOLLAR LIMIT</td>
+			</tr>
+            <tr>
+				<td>475</td>
+				<td>EXCEEDS DAILY MAX CASH AMOUNT</td>
+			</tr>
+            <tr>
+				<td>476</td>
+				<td>CASH NOT ALLOWED FOR THIS DAY OF WEEK</td>
+			</tr>
+            <tr>
+				<td>477</td>
+				<td>CASH AMOUNT EXCEEDS CASH BALANCE</td>
+			</tr>
+            <tr>
+				<td>478</td>
+				<td>CASH AMOUNT EXCEEDS DAILY MAX LIMIT</td>
+			</tr>
+            <tr>
+				<td>479</td>
+				<td>MASTER ERROR - CALL T-CHEK</td>
+			</tr>
+            <tr>
+				<td>480</td>
+				<td>INVOICE FILE ERROR</td>
+			</tr>
+            <tr>
+				<td>481</td>
+				<td>SITE EXTENSION ERROR - CALL T-CHEK</td>
+			</tr>
+            <tr>
+				<td>482</td>
+				<td>CITY SUPPLIER ERROR - CALL T-CHEK</td>
+			</tr>
+            <tr>
+				<td>483</td>
+				<td>ERROR READING SITE MASTER</td>
+			</tr>
+            <tr>
+				<td>484</td>
+				<td>PO NUMBER NOT ALLOWED FOR DEBIT DOLLS</td>
+			</tr>
+            <tr>
+				<td>485</td>
+				<td>INVALID CARD STATUS</td>
+			</tr>
+            <tr>
+				<td>486</td>
+				<td>INVALID TRACTOR VALIDATION FLAG</td>
+			</tr>
+            <tr>
+				<td>487</td>
+				<td>EXCEEDS CUSTOMER MASTER PROD LIMIT</td>
+			</tr>
+            <tr>
+				<td>488</td>
+				<td>EXCEEDS CUSTOMER MASTER COMBINED LMT</td>
+			</tr>
+            <tr>
+				<td>489</td>
+				<td>EXCEEDS CUSTOMER MASTER SPECIAL LMT</td>
+			</tr>
+            <tr>
+				<td>490</td>
+				<td>EXCEEDS CUSTOMER MASTER OTHER LIMIT</td>
+			</tr>
+            <tr>
+				<td>491</td>
+				<td>ERROR WRITING AUTH RECORD</td>
+			</tr>
+            <tr>
+				<td>492</td>
+				<td>ERROR REWRITING SITE MASTER</td>
+			</tr>
+            <tr>
+				<td>493</td>
+				<td>ERROR REWRITING CUSTOMER MASTER</td>
+			</tr>
+            <tr>
+				<td>494</td>
+				<td>ERROR REWRITING PO TABLE</td>
+			</tr>
+            <tr>
+				<td>495</td>
+				<td>ERROR REWRITING CARD MASTER</td>
+			</tr>
+            <tr>
+				<td>496</td>
+				<td>ERROR REWRITING CREDIT MASTER</td>
+			</tr>
+            <tr>
+				<td>497</td>
+				<td>INVALID SITE FOR PREAUTH</td>
+			</tr>
+            <tr>
+				<td>498</td>
+				<td>SITE MUST BE STTLMNT SITE TO PREAUTH</td>
+			</tr>
+            <tr>
+				<td>499</td>
+				<td>DUPLICATE INVOICE FOR THIS SITE</td>
+			</tr>
+            <tr>
+				<td>500</td>
+				<td>ERROR UPDATING SELECT STOP FILE</td>
+			</tr>
+            <tr>
+				<td>501</td>
+				<td>QTY MUST BE > 1</td>
+			</tr>
+            <tr>
+				<td>502</td>
+				<td>SITE NOT SET UP FOR SETTLEMENT</td>
+			</tr>
+            <tr>
+				<td>503</td>
+				<td>SITE OUT OF NETWORK / REQUEST EXCEEDS TRAILER VOLUME BAL</td>
+			</tr>
+            <tr>
+				<td>504</td>
+				<td>REQUEST EXCEEDS TRACTOR VOLUME BALAN</td>
+			</tr>
+            <tr>
+				<td>505</td>
+				<td>DUPLICATE DRAFT NUMBER</td>
+			</tr>
+            <tr>
+				<td>506</td>
+				<td>DRAFT NUMBER OBSOLETE</td>
+			</tr>
+            <tr>
+				<td>507</td>
+				<td>MUST USE U.S. DRAFT AT THIS SITE</td>
+			</tr>
+            <tr>
+				<td>508</td>
+				<td>DRAFT#'S START WITH 751 ARE ONLY FOR</td>
+			</tr>
+            <tr>
+				<td>509</td>
+				<td>MUST USE CANADIAN DRAFT AT THIS SITE</td>
+			</tr>
+            <tr>
+				<td>510</td>
+				<td>INVALID DRAFT NUMBER</td>
+			</tr>
+            <tr>
+				<td>511</td>
+				<td>INVALID DRAFT CHECK DIGIT</td>
+			</tr>
+            <tr>
+				<td>512</td>
+				<td>ERROR UPDATING DRAFT FILE</td>
+			</tr>
+            <tr>
+				<td>513</td>
+				<td>COMPUTATIONAL ERROR       ppg too low [0], qty 0, or maybe amt 0</td>
+			</tr>
+            <tr>
+				<td>514</td>
+				<td>PPU > MAX PPU RANGE</td>
+			</tr>
+            <tr>
+				<td>515</td>
+				<td>PPU < MIN PPU RANGE</td>
+			</tr>
+            <tr>
+				<td>516</td>
+				<td>ERROR READING PPU RANGE FILE</td>
+			</tr>
+            <tr>
+				<td>517</td>
+				<td>INVOICE NUMBER MUST > SPACES</td>
+			</tr>
+            <tr>
+				<td>518</td>
+				<td>FUEL 1 PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>519</td>
+				<td>FUEL 2 PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>520</td>
+				<td>NONHWY PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>521</td>
+				<td>OTHER 1 PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>522</td>
+				<td>OTHER 2 PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>523</td>
+				<td>CASH PRODUCT RESTRICTED</td>
+			</tr>
+            <tr>
+				<td>524</td>
+				<td>FUEL 1 PROD NOT AUTH/PO REQUIRED</td>
+			</tr>
+            <tr>
+				<td>525</td>
+				<td>FUEL 2 PROD NOT AUTH/PO REQUIRED</td>
+			</tr>
+            <tr>
+				<td>526</td>
+				<td>NONHWY PROD NOT AUTH/PO REQUIRED</td>
+			</tr>
+            <tr>
+				<td>527</td>
+				<td>OTHER 1 PROD NOT AUTH/PO REQ OR INVLD</td>
+			</tr>
+            <tr>
+				<td>528</td>
+				<td>OTHER 2 PROD NOT AUTH/PO REQ OR INVLD</td>
+			</tr>
+            <tr>
+				<td>529</td>
+				<td>CASH NOT AUTHORIZED/PO REQUIRED</td>
+			</tr>
+            <tr>
+				<td>530</td>
+				<td>CASH WITH FUEL ONLY</td>
+			</tr>
+            <tr>
+				<td>531</td>
+				<td>TRANS ERROR; CALL T-CHEK</td>
+			</tr>
+            <tr>
+				<td>532</td>
+				<td>ERROR READING AUTH FILE-PLEASE RETRY</td>
+			</tr>
+            <tr>
+				<td>533</td>
+				<td>DUPLICATE TRANSACTION</td>
+			</tr>
+            <tr>
+				<td>534</td>
+				<td>DUPLICATE DRAFT FOR THIS SITE</td>
+			</tr>
+            <tr>
+				<td>535</td>
+				<td>TRANSACTION TIME OUT-PLEASE RETRY</td>
+			</tr>
+            <tr>
+				<td>537</td>
+				<td>CARD DOES NOT MATCH CARD ON PO</td>
+			</tr>
+            <tr>
+				<td>538</td>
+				<td>ID DOES NOT MATCH ID ON PO</td>
+			</tr>
+            <tr>
+				<td>539</td>
+				<td>UNIT DOES NOT MATCH UNIT ON PO</td>
+			</tr>
+            <tr>
+				<td>540</td>
+				<td>PRODUCT NOT ALLOWED FOR THIS PO</td>
+			</tr>
+            <tr>
+				<td>541</td>
+				<td>ONLY ON PRODUCT ALLOWED FOR THIS PO</td>
+			</tr>
+            <tr>
+				<td>542</td>
+				<td>PAYCHECK PO AMT NOT = TO INVCE TOTAL</td>
+			</tr>
+            <tr>
+				<td>543</td>
+				<td>CARD ON PAYCHECK ONLY STATUS</td>
+			</tr>
+            <tr>
+				<td>544</td>
+				<td>CARD TYPE = 03 ONLY CASH IS ALLOWED</td>
+			</tr>
+            <tr>
+				<td>545</td>
+				<td>AMT REQSTD EXCEEDS DEBIT DOLLAR LMT</td>
+			</tr>
+            <tr>
+				<td>546</td>
+				<td>PREPAY DEBIT $'s CANT BE DIRECT BILL</td>
+			</tr>
+            <tr>
+				<td>547</td>
+				<td>PO NOT ON FILE</td>
+			</tr>
+            <tr>
+				<td>548</td>
+				<td>DRVR ID ON PO DOESNT MATCH ID ON FILE</td>
+			</tr>
+            <tr>
+				<td>549</td>
+				<td>PURCHASE EXCEEDS WEEKLY PROD LIMIT</td>
+			</tr>
+            <tr>
+				<td>550</td>
+				<td>TOO MANY MERCHANT CODES SENT</td>
+			</tr>
+            <tr>
+				<td>551</td>
+				<td>PAYCHECK AMT REQUIRES PO NUMBER</td>
+			</tr>
+            <tr>
+				<td>552</td>
+				<td>PAYCHECK CASH AMOUNT MUST = PO AMOUNT</td>
+			</tr>
+            <tr>
+				<td>553</td>
+				<td>EXCEEDS TRANS LIMITS OR OUT OF NETWORK</td>
+			</tr>
+            <tr>
+				<td>554</td>
+				<td>ACCOUNT NOT SET UP FOR PAYCHECK</td>
+			</tr>
+            <tr>
+				<td>555</td>
+				<td>SITE NOT VALID ON CMA NETWORK</td>
+			</tr>
+            <tr>
+				<td>556</td>
+				<td>LUMPER PO REQIRED FOR "LU" PRODUCT</td>
+			</tr>
+            <tr>
+				<td>557</td>
+				<td>MUST ENTER "LU" PRODUCT TO USE LUMPER PO</td>
+			</tr>
+            <tr>
+				<td>558</td>
+				<td>TRAILER NUMBER IS REQUIRED</td>
+			</tr>
+            <tr>
+				<td>559</td>
+				<td>DELETE OF ORIGINAL TRANSACTION FAILED</td>
+			</tr>
+            <tr>
+				<td>560</td>
+				<td>READ FOR ORIGINAL TRANSACTION FAILED</td>
+			</tr>
+            <tr>
+				<td>561</td>
+				<td>START FOR ORIGINAL TRANSACTION FAILED</td>
+			</tr>
+            <tr>
+				<td>562</td>
+				<td>PO NOT SET UP FOR PAY-CHEK DOLLARS</td>
+			</tr>
+            <tr>
+				<td>563</td>
+				<td>ERROR READING SELECT STOP PRICE FCODE 1</td>
+			</tr>
+            <tr>
+				<td>564</td>
+				<td>ERROR READING SELECT STOP PRICE FCODE 2</td>
+			</tr>
+            <tr>
+				<td>565</td>
+				<td>ERROR READING SELECT STOP PRICE NONHWY</td>
+			</tr>
+            <tr>
+				<td>566</td>
+				<td>NO PRICE FOR PRODUCT ENTERED</td>
+			</tr>
+            <tr>
+				<td>567</td>
+				<td>INVALID PROVINCE FOR ULTRAMAR CARD</td>
+			</tr>
+            <tr>
+				<td>568</td>
+				<td>REQUEST OVER LIMIT; TRY A LOWER LIMIT</td>
+			</tr>
+            <tr>
+				<td>569</td>
+				<td>ERROR REWRITING IOL AUTH RECORD</td>
+			</tr>
+            <tr>
+				<td>570</td>
+				<td>ERROR STARTING AUTH FILE FOR IOL RECORD</td>
+			</tr>
+            <tr>
+				<td>571</td>
+				<td>ERROR READING AUTH FILE FOR IOL RECORD</td>
+			</tr>
+            <tr>
+				<td>589</td>
+				<td>NO PRICE MASTER RECORDS FOUND</td>
+			</tr>
+            <tr>
+				<td>597</td>
+				<td>INVALID EXPIRATION DATE</td>
+			</tr>
+            
+
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+<%- include("footer.ejs") %>

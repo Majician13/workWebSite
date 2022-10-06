@@ -1,0 +1,207 @@
+<%- include("header.ejs") %>
+
+
+	<body>
+		<!-- BASIC FORM -->
+            <div class="box" id="items">
+                <% if (customerName == 'estes'){ %>
+                    <% customerName = 'Estes' %>
+                    <h1><%= customerName %></h1>
+                    <% newSearch.forEach(function(item){ %>
+                        <div class="items" id="itemHeader">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#<%= item.AlphaCode %>" role="button" aria-expanded="false" aria-controls="<%= item.AlphaCode %>">
+                                <h1><%= item.terminalName %> #<%= item.terminalNum %> <%= item.AlphaCode %></h1> 
+                                </a>
+                            </p>
+                            <div class="<%= item.AlphaCode %> collapse multi-collapse" id="<%= item.AlphaCode %>" name="<%= item.AlphaCode %>">
+                                <div class="card card-body">
+                                    <div class="box">
+                                        <div class="container text-center">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <!-- SITE ADDRESS -->
+                                                    <div class="card" style="width: 18rem">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Site Address</h5>
+
+                                                            <address class="card-text">
+                                                                <%= item.streetAddress %><br />
+                                                                <%= item.city %> <%= item.state %> <%= item.zip %><br />
+                                                                <%= item.phone %><br />
+                                                                <%= item.terminalManager %>
+                                                            </address>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <!-- SITE IP INFO -->
+                                                    <div class="col-4 col-sm-4 themed-grid-col">
+                                                        <h2>Site IP Info</h2>
+                                                        <h5 class="itemLabelSci" name="itemLabelSci">
+                                                            OPW/ICU/SCI</h5><br />
+                                                            <strong><%= item.opwIcuSci %></strong>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            Abierto IP</h5><br />
+                                                            <strong><%= item.crdRdrIp %></strong>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            Abierto Port</h5><br />
+                                                            <strong><%= item.crdRdrPort %></strong>
+                                                        
+                                                        <h5 class="itemLabelAtg">
+                                                            ATG IP</h5><br />
+                                                            <strong><%= item.atgIp %></strong>
+                                                        
+                                                        <h5 class="itemLabelAtg">
+                                                            ATG Port</h5><br />
+                                                            <%= item.atgPort %>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            FSC IP</h5><br />
+                                                            <%= item.fsc %>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            FSC Port</h5><br />
+                                                            <%= item.fscPort %>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            FSC UserName</h5><br />
+                                                            <%= item.fscLogin %>
+                                                        
+                                                        <h5 class="itemLabel">
+                                                            FSC Password</h5><br />
+                                                            <%= item.fscPassword %>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <!-- VENDORS INFO -->
+                                                    <div class="card" style="width: 18rem">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Vendors</h5>
+                                                        <h6 class="card-subtitle mb-2 text-muted"><strong>Vendor 1</strong></h6><br /></p>
+                                                        <address class="card-text">
+                                                        <%= item.vendor1 %><br />
+                                                        <%= item.vendor1Phone %><br />
+                                                        <%= item.vendor1Email %>
+                                                        </address>
+                                                        </div>
+                                                    
+                                                        <div class="card-body">
+                                                            
+                                                        <h6 class="card-subtitle mb-2 text-muted"><strong>Vendor 2</strong></h6><br /></p>
+                                                        <address class="card-text">
+                                                        <%= item.vendor2 %><br />
+                                                        <%= item.vendor2Phone %><br />
+                                                        <%= item.vendor2Email %>
+                                                        </address>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <!-- SITE EQUIPMENT INFO -->
+                                                    <div class="col-4 col-sm-4 themed-grid-col">
+                                                        <h2>Site Notes</h2>
+                                                        <p class="notesLabel">
+                                                            <strong>Notes</strong><br />
+                                                            <%= item.notes %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Dispenser Manufacturer</strong><br />
+                                                            <%= item.dispMan %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Dispenser Model</strong><br />
+                                                            <%= item.dispMod %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Curb Hose Length</strong><br />
+                                                            <%= item.curbHoseLength %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Swivel Part Number</strong><br />
+                                                            <%= item.swivelPn %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Breakaway Part Number</strong><br />
+                                                            <%= item.bwayPn %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Fuel Filter Part Number</strong><br />
+                                                            <%= item.fuelFiltPn %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Manhole Cover Diameter</strong><br />
+                                                            <%= item.manholeCoverDiam %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Number of Manhole Covers</strong><br />
+                                                            <%= item.numOfManholeCover %>
+                                                        </p>
+                                                        <p class="notesLabel">
+                                                            <strong>Other Items</strong><br />
+                                                            <%= item.otherItems %>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                                        
+                            </div>
+                        </div>
+                    
+                <% }) %>                 
+                <% } else if (customerName == 'odfl'){ %>
+                <% newSearch.forEach(function(item){ %>
+                    <% customerName = 'ODFL' %>
+                    <h1><%= customerName %></h1>
+                    
+                        <div class="items" id="odflHeader">
+                            <div class="items">
+                                <p>
+                                    <a data-bs-toggle="collapse" href="#<%= item.AlphaCode %>" role="button" aria-expanded="false" aria-controls="<%= item.AlphaCode %>">
+                                    <h1><%= item.terminalName %> #<%= item.terminalNum %> <%= item.AlphaCode %></h1> 
+                                    </a>
+                                </p>		
+                            </div>
+                        </div>
+                <% }) %>
+            <% } else if (customerName == 'saia'){ %>
+                <% newSearch.forEach(function(item){ %>
+                    <% customerName = 'SAIA' %>
+                    <h1><%= customerName %></h1>
+                    
+                        <div class="items" id="saiaHeader">
+                            <div class="items">
+                                <p>
+                                    <a data-bs-toggle="collapse" href="#<%= item.AlphaCode %>" role="button" aria-expanded="false" aria-controls="<%= item.AlphaCode %>">
+                                    <h1><%= item.terminalName %> #<%= item.terminalNum %> <%= item.AlphaCode %></h1> 
+                                    </a>
+                                </p>		
+                            </div>
+                        </div>
+                <% }) %>
+            <% } %>
+                    
+            </div>
+                    
+        <!-- BACK BUTTON -->
+		<form>
+			<input type="button" value="Go back!" onclick="history.back()" />
+		</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+
+
+	</body>
+
+<%- include("footer.ejs") %>

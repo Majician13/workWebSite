@@ -1,0 +1,144 @@
+<%- include("header.ejs") %>
+
+<body>
+	<div class="containerWrap">
+		<table class="indexTable">
+			<tr class="tableTr">
+				<td class="sidebar">
+					<%- include("links"); %>
+					<hr />
+					<h4>Weather</h4>
+					<%- include("weather"); %>
+				</td>
+
+				<td class="mainBody">
+					<table class="bodyTable">
+						<tr class="mainTr">
+							<td class="mainTd">
+								<!-- BEA LOGO -->
+								<img id="beaLogo" src="/public/images/beaImage.png" alt="Beneficial Logo" />
+							</td>
+							<td class="welcomeTd">
+								<div id="mainWelcome">
+									<div>
+										<!-- CHANGE TO SHOW AFTERNOON/EVENING DEPENDING ON TIME OF DAY -->
+
+										<h3 id="timeOfDay"></h3>
+										<h3>Today is</h3>
+										<h1 id="dayOfWeek"></h1>
+										<h1 id="today"></h1>
+										<h2 id="clock"></h2>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr class="indexSep">
+							<td class="indexSep">
+								<hr class="indexSep" />
+							</td>
+						</tr>
+						<tr class="searchTr">
+							<td>
+								<form name="searchSubmit" id="searchSubmit" action="/search" method="post">
+									<div id="searchCustomers">
+										<h1>CUSTOMER SITE LOOKUP</h1>
+
+										<!-- CUSTOMER OPTION -->
+										<div id="customerOption">
+											<select name="customerName" id="customerName" value="{{ searchOptions }}">
+												<option
+													name="estes"
+													value="estes"
+													selected="{{ searchOptions === this.value }}"
+												>
+													Estes
+												</option>
+												<option
+													name="odfl"
+													value="odfl"
+													selected="{{ searchOptions === this.value }}"
+												>
+													ODFL
+												</option>
+												<option
+													name="saia"
+													value="saia"
+													selected="{{ searchOptions === this.value }}"
+												>
+													SAIA
+												</option>
+												<option value="selectOption" name="selectOption" selected disabled hidden>
+													Select Option
+												</option>
+											</select>
+										</div>
+
+										<div id="searchCustomers">
+											<select name="searchOptions" id="searchOptions" value="{{ searchOption }}">
+												<option
+													name="termName"
+													value="terminalName"
+													selected="{{ searchOption === this.value }}"
+												>
+													Terminal Name
+												</option>
+												<option
+													name="alphaCode"
+													value="AlphaCode"
+													selected="{{ searchOption === this.value }}"
+												>
+													alphaCode
+												</option>
+												<option
+													name="city"
+													value="city"
+													selected="{{ searchOption === this.value }}"
+												>
+													City
+												</option>
+												<option
+													name="state"
+													value="state"
+													selected="{{ searchOption === this.value }}"
+												>
+													State
+												</option>
+												<option
+													name="termNum"
+													value="terminalNum"
+													selected="{{ searchOption === this.value }}"
+												>
+													Terminal Number
+												</option>
+											</select>
+										</div>
+
+										<div class="box" id="heading">
+											<input type="text" name="search" id="searchForm" />
+											<input type="submit" />
+										</div>
+									</div>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<script
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"
+	></script>
+	<script src="/public/javascripts/formulas.js"></script>
+	<script src="/app.js"></script>
+</body>
+
+<%- include("footer.ejs") %>

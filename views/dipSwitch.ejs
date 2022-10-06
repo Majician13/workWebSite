@@ -1,0 +1,163 @@
+<%- include("header.ejs") %>
+
+<body>
+	<h1>K800 Hybrid Dip Switch Settings</h1>
+	<h2 class="danger">Power down first, make changes, power back up!!</h2>
+	<h3>Top of Electronic Circuit Board (SW1)</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">1</th>
+				<th scope="col">2</th>
+				<th scope="col">3</th>
+				<th scope="col">4</th>
+				<th scope="col">5</th>
+				<th scope="col">6</th>
+				<th scope="col">7</th>
+				<th scope="col">8</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+			</tr>
+			<tr>
+				<td>down</td>
+				<td>down</td>
+				<td>down</td>
+				<td>down</td>
+				<td>up</td>
+				<td>up</td>
+				<td>up</td>
+				<td>up</td>
+			</tr>
+			<tr>
+				<td>open</td>
+				<td>open</td>
+				<td>open</td>
+				<td>open</td>
+				<td>closed</td>
+				<td>closed</td>
+				<td>closed</td>
+				<td>closed</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<ul>
+		<li>#1-4 Open (down) = auto (card reader controlled)</li>
+		<li>#1-4 Closed (up) = manual (dispenser can operate without the card reader)</li>
+		<li>#5-8 Open (down) = active pump pulser</li>
+		<li>#5-8 Closed (up) = passive pump pulser</li>
+	</ul>
+
+	<h3>Center of Electronic Board (SW2)</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">1</th>
+				<th scope="col">2</th>
+				<th scope="col">3</th>
+				<th scope="col">4</th>
+				<th scope="col">5</th>
+				<th scope="col">6</th>
+				<th scope="col">7</th>
+				<th scope="col">8</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+				<td><span>&#8865;</span></td>
+			</tr>
+			<tr>
+				<td>down</td>
+				<td>down</td>
+				<td>down</td>
+				<td>up</td>
+				<td>down</td>
+				<td>down</td>
+				<td>down</td>
+				<td>up</td>
+			</tr>
+			<tr>
+				<td>open</td>
+				<td>open</td>
+				<td>open</td>
+				<td>closed</td>
+				<td>open</td>
+				<td>open</td>
+				<td>open</td>
+				<td>closed</td>
+			</tr>
+		</tbody>
+	</table>
+
+    <ul>
+		<li>#1-2 = How many PCTs site has:
+            <li>
+                FIT/PCT 1: OPEN/OPEN
+            </li>
+            <li>
+                FIT/PCT 2: CLOSED/OPEN
+            </li>
+            <li>
+                FIT/PCT 1: OPEN/CLOSED
+            </li>
+            <li>
+                FIT/PCT 2: CLOSED/CLOSED
+            </li>
+        </li>
+		<li>#3 = OPEN</li>
+		<li>#4 = MAG READER: CLOSED
+            <li>
+                CHIP READER: OPEN
+            </li>
+        </li>
+		<li>#5 = PREVENT USER KEYBOARD ENTRY: CLOSED
+            <li>
+                ALLOW USER KEYBOARD ENTRY: OPEN
+            </li>
+        </li>
+        <li>
+            #6 = TEST MODE: CLOSED
+            <li>
+                NORMAL MODE: OPEN
+            </li>
+        </li>
+        <li>
+            #7 = ELECTRONIC PULSER: CLOSED
+            <li>
+                MECHANICAL PULSER: OPEN
+            </li>
+        </li>
+        <li>
+            #8 = CLOSED
+        </li>
+        <li>
+            If the site has Bennett Dispensers, then #7 will be up/closed.
+        </li>
+        <li>
+            If the site has more than one K800, then switches 1 & 2 will be configured differently
+        </li>
+	</ul>
+
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+<%- include("footer.ejs") %>

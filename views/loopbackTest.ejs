@@ -1,0 +1,59 @@
+<%- include("header.ejs") %>
+
+
+<body>
+	<ol>
+		<li>Pull 25 pin cable from Lantronix (in server room).</li>
+		<li>Place paperclip (or jumper) in pin 2 and pin 3 (See pic).</li>
+		<img src="/public/images/Picture1.jpg" alt="RS-485 port" width="400" height="300" />
+		<li>Open Putty.</li>
+		<li>Click on “Terminal” tab.</li>
+		<li>Under “Local Echo”, Click “Force On”</li>
+		<li>Under “Local Line Editing”, Click “Force Off”</li>
+		<li>Click on “Session” tab.</li>
+		<li>Under “Host Name (or IP Address)”, type IP for card reader you are attempting to reach.</li>
+		<li>Under “Port”, Type “8001”</li>
+		<li>Click “Open”.</li>
+		<li>
+			Type one letter at a time slowly. If you type “a”, you should see two (2) a’s show on the
+			screen, “aa”. If you do not see two letters, the Lantronix most likely needs to be replaced.
+		</li>
+		<li>
+			If you do see two of each letter you type, Pull the jumper from pins 2 and 3 and replace the
+			25 pin cable.
+		</li>
+		<li>Go to the B&B converter nearest to the card reader.</li>
+		<li>
+			Pull the 9 pin cable and place the jumper into pins 2 and 3 on the converter. (See pic).
+		</li>
+		<img src="/public/images/Picture2.jpg" alt="db-9 port" width="200" height="300" />
+		<li>
+			Type in Putty. Again, you should see two of each letter. If not, Verify that the cable going
+			between converters is correct by ohming each wire to ground and then twisting the red/black
+			wires that are next to each other together and ohming them out from the other end to ensure
+			the correct black wire is with the correct color wire. If everything ohms out, the converters
+			need to be replaced. If they do not ohm out correctly, the cable needs to be replaced.
+		</li>
+		<li>
+			If you do see two letters that you typed, the converters are working normally. You can then go
+			to the card reader and remove the red and white wires coming from the converter and twist them
+			together. (See pic).
+		</li>
+		<img src="/public/images/Picture3.jpg" alt="wire terminal inside ICU" width="200" height="300" />
+		<li>
+			Repeat the loopback test. If you see double letters, but are still unable to get status from
+			the card reader in TSU, the MK II board needs replacement.
+		</li>
+		<li>
+			If you are unable to see the double letters at this point, the cable with the red/white wires
+			is faulty and needs replacement.
+		</li>
+	</ol>
+</body>
+
+<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+<%- include("footer.ejs") %>

@@ -1,0 +1,235 @@
+<%- include("header.ejs") %>
+
+<body>
+	<!-- BASIC FORM -->
+	<% if (customerName == 'estes'){ %>
+	<img src="/public/images/estes.png" alt="Estes Logo" />
+	<% } else if (customerName == 'odfl'){ %>
+	<img src="/public/images/odfl.jpg" alt="ODFL Logo" />
+	<% } else if (customerName == 'saia'){ %>
+	<img src="/public/images/saia.png" alt="SAIA Logo" />
+	<% } %> <% newSearch.forEach(function(item){ %>
+
+	<div class="items" id="itemHeader">
+		<h1><%= item.terminalName %> #<%= item.terminalNum %> <%= item.AlphaCode %></h1>
+
+		<a class="btn btn-light btn-lg" href="editSite" role="button">Edit Site</a>
+
+		<div class="<%= item.AlphaCode %>" id="<%= item.AlphaCode %>" name="<%= item.AlphaCode %>">
+			<div class="card card-body">
+				<div class="box">
+					<div class="container text-center">
+						<div class="row">
+							<!-- SITE ADDRESS -->
+							<div class="card" style="width: 20%">
+								<div class="card-body">
+									<h5 class="card-title">Site Address</h5>
+									<address class="card-text">
+										<%= item.streetAddress %><br />
+										<%= item.city %> <%= item.state %> <%= item.zip %><br />
+										<%= item.phone %><br />
+										<%= item.terminalManager %>
+									</address>
+								</div>
+
+								<!-- VENDORS INFO -->
+								<div class="card-body">
+									<h5 class="card-title">Vendors</h5>
+									<h6 class="card-subtitle mb-2 text-muted"><strong>Vendor 1</strong></h6>
+									<br />
+									<address class="card-text">
+										<%= item.vendor1 %><br />
+										<%= item.vendor1Phone %><br />
+										<%= item.vendor1Email %>
+									</address>
+								</div>
+
+								<div class="card-body">
+									<h6 class="card-subtitle mb-2 text-muted"><strong>Vendor 2</strong></h6>
+									<br />
+									<address class="card-text">
+										<%= item.vendor2 %><br />
+										<%= item.vendor2Phone %><br />
+										<%= item.vendor2Email %>
+									</address>
+								</div>
+							</div>
+
+							<!-- SITE IP INFO -->
+							<div class="col-6 col-sm-4 themed-grid-col" style="width: 25%">
+								<h2>Site IP Info</h2>
+								<p class="itemLabel" name="itemLabelSci">
+									<strong>OPW/ICU/SCI</strong><br />
+									<%= item.opwIcuSci %>
+								</p>
+								<% if (item.opwIcuSci == 'OPW'){ %>
+								<p class="itemLabel">
+									<strong>Abierto IP</strong><br />
+									<%= item.crdRdrIp %>
+								</p>
+								<p class="itemLabel">
+									<strong>Abierto Port</strong><br />
+									<%= item.crdRdrPort %>
+								</p>
+								<p class="itemLabelAtg">
+									<strong>ATG IP</strong><br />
+									<%= item.atgIp %>
+								</p>
+								<p class="itemLabelAtg">
+									<strong>ATG Port</strong><br />
+									<%= item.atgPort %>
+								</p>
+								<p class="itemLabel">
+									<strong>FSC IP</strong><br />
+									<%= item.fsc %>
+								</p>
+								<p class="itemLabel">
+									<strong>FSC Port</strong><br />
+									<%= item.fscPort %>
+								</p>
+								<p class="itemLabel">
+									<strong>FSC UserName</strong><br />
+									<%= item.fscLogin %>
+								</p>
+								<p class="itemLabel">
+									<strong>FSC Password</strong><br />
+									<%= item.fscPassword %>
+								</p>
+
+								<% } else if (customerName == 'odfl'){%>
+								<h2>Site IP Info</h2>
+								<p class="itemLabelAtg">
+									<strong>ATG IP</strong><br />
+									<%= item.atgIp %>
+								</p>
+								<p class="itemLabelAtg">
+									<strong>ATG Port</strong><br />
+									<%= item.atgPort %>
+								</p>
+								<% } else if (item.opwIcuSci == 'SCI'){ %>
+								<p>Contact SCI at:</p>
+								<% } %>
+							</div>
+
+							<!-- TROUBLESHOOTING HELP -->
+
+							<!-- K800 TROUBLESHOOTING HELP -->
+							<div class="col-6 col-sm-4 themed-grid-col" style="width: 25%">
+								<div class="card card-body">
+									<div class="box">
+										<div class="container text-center">
+											<div class="card-body">
+												<h5 class="card-title">TroubleShooting</h5>
+												<% if (item.opwIcuSci == 'OPW'){ %>
+												<h6 class="card-subtitle mb-2 text-muted">
+													<strong>K800 Card Readers</strong>
+												</h6>
+												<br />
+												<ul>
+													<li>
+														<a href="/dipSwitch">K800 Dip Switch Settings</a>
+													</li>
+													<li>
+														<a href="/commonFSCCommands">Common FSC Commands</a>
+													</li>
+													<li>
+														<a href="/tCheckError">T-Check Error Codes</a>
+													</li>
+													<li>
+														<a href="/troubleShootFlowChart">Troubleshooting Flowchart</a>
+													</li>
+												</ul>
+												<% } %>
+											</div>
+
+											<!-- VEEDER ROOT ATG TROUBLESHOOTING HELP -->
+											<div class="card-body">
+												<h5 class="card-title">Veeder ATG</h5>
+												<ul>
+													<li>
+														<a href="/commonAtgCommands">Common ATG Commands</a>
+													</li>
+													<li>
+														<a href="/tlsTroubleshootingGuide">TLS Troubleshooting Guide</a>
+													</li>
+												</ul>
+											</div>
+
+											<!-- WIRELESS TROUBLESHOOTING -->
+											<div class="card-body">
+												<h5 class="card-title">Wireless Guides</h5>
+												<ul>
+													<li>
+														<a href="/loopbackTest">Loopback Test</a>
+													</li>
+													<li>
+														<a href="/wirelessComms">Wireless Communication Remediation</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-6 col-sm-4 themed-grid-col" style="width: 30%">
+								<!-- SITE EQUIPMENT INFO -->
+								<div class="col-4 col-sm-4 themed-grid-col">
+									<h2>Site Notes</h2>
+									<p class="notesLabel">
+										<strong>Notes</strong><br />
+										<%= item.notes %>
+									</p>
+									<p class="notesLabel">
+										<strong>Dispenser Manufacturer</strong><br />
+										<%= item.dispMan %>
+									</p>
+									<p class="notesLabel">
+										<strong>Dispenser Model</strong><br />
+										<%= item.dispMod %>
+									</p>
+									<p class="notesLabel">
+										<strong>Curb Hose Length</strong><br />
+										<%= item.curbHoseLength %>
+									</p>
+									<p class="notesLabel">
+										<strong>Swivel Part Number</strong><br />
+										<%= item.swivelPn %>
+									</p>
+									<p class="notesLabel">
+										<strong>Breakaway Part Number</strong><br />
+										<%= item.bwayPn %>
+									</p>
+									<p class="notesLabel">
+										<strong>Fuel Filter Part Number</strong><br />
+										<%= item.fuelFiltPn %>
+									</p>
+									<p class="notesLabel">
+										<strong>Manhole Cover Diameter</strong><br />
+										<%= item.manholeCoverDiam %>
+									</p>
+									<p class="notesLabel">
+										<strong>Number of Manhole Covers</strong><br />
+										<%= item.numOfManholeCover %>
+									</p>
+									<p class="notesLabel">
+										<strong>Other Items</strong><br />
+										<%= item.otherItems %>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<% }) %>
+	<!-- BACK BUTTON -->
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()" />
+	</form>
+</body>
+
+<%- include("footer.ejs") %>
