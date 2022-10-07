@@ -1,4 +1,4 @@
-<%- include("header.ejs") %>
+<%- include('partials/header') %>
 
 <body>
 	<div class="containerWrap">
@@ -9,6 +9,9 @@
 					<hr />
 					<h4>Weather</h4>
 					<%- include("weather"); %>
+					<a id="login" class="btn btn-dark btn-lg" href="login" role="button">Login</a>
+					<a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+					<a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
 				</td>
 
 				<td class="mainBody">
@@ -138,7 +141,6 @@
 		crossorigin="anonymous"
 	></script>
 	<script src="/public/javascripts/formulas.js"></script>
-	<script src="/app.js"></script>
 </body>
 
-<%- include("footer.ejs") %>
+<%- include('partials/footer') %>

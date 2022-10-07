@@ -4,12 +4,31 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 const viewsPath = path.join(__dirname, 'views');
+const encrypt = require('mongoose-encryption');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 // USE FILE SYSTEM TO LOCATE GUIDES
 const fs = require('fs');
 
 // EXPRESS CONFIGURATIONS
 const app = express();
+
+// CONFIGURE PASSPORT/COOKIES
+app.use(
+	session({
+		// secret: process.env.SECRET,
+		secret: process.env.SECRET,
+		resave: false,
+		saveUninitialized: false,
+	})
+);
+
+// INITIALIZE PASSPORT
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -19,13 +38,34 @@ app.use('/public', express.static(__dirname + '/public'));
 //CONNECTIONS TO MONGODB
 function makeNewConnection(uri) {
 	var newConnection = mongoose.connect(uri);
+	// mongoose.set('useCreateIndex', true);
 	var db = mongoose.connection;
 	console.log('db = ' + db);
 	return db, console.log('Mongoose is ' + mongoose.connection.readyState);
 }
 
-// DATABASE CONNECTIONS
+// DATABASE CONNECTION
 const estesdb = 'mongodb://localhost:27017/estes';
+
+// USER SCHEMA
+const userSchema = new mongoose.Schema({
+	email: String,
+	password: String,
+	admin: String,
+});
+
+userSchema.plugin(passportLocalMongoose);
+
+// const secret = process.env.SECRET;
+// userSchema.plugin(encrypt, { secret: secret, encryptedFields: ['password'] });
+
+// USER MODEL
+const User = mongoose.model('User', userSchema, (collection = 'users'));
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 //CREATE ESTES DB SCHEMA
 const estesSiteSchema = new mongoose.Schema({
@@ -256,8 +296,61 @@ app.post('/search', function (req, res) {
 		});
 });
 
+app.post('/register', function (req, res) {
+	makeNewConnection(estesdb);
+	User.register({ username: req.body.username }, req.body.password, function (err, user) {
+		if (err) {
+			console.log(err);
+			res.redirect('/register');
+		} else {
+			passport.authenticate('local')(req, res, function () {
+				res.redirect('/');
+			});
+		}
+	});
+});
+
+app.post('/login', function (req, res) {
+	makeNewConnection(estesdb);
+	const user = new User({
+		username: req.body.username,
+		password: req.body.password,
+	});
+
+	req.login(user, function (err) {
+		if (err) {
+			console.log(err);
+		} else {
+			passport.authenticate('local')(req, res, function () {
+				res.redirect('/');
+			});
+		}
+	});
+});
+
 app.get('/', function (req, res) {
-	res.render('index');
+	if (req.isAuthenticated()) {
+		res.render('index');
+	} else {
+		res.redirect('/login');
+	}
+});
+
+app.get('/login', function (req, res) {
+	res.render('login');
+});
+
+app.get('/register', function (req, res) {
+	res.render('register');
+});
+
+app.get('/logout', function (req, res) {
+	req.logout(function (err) {
+		if (err) {
+			console.log(err);
+		}
+		res.redirect('/login');
+	});
 });
 
 app.get('/search', function (req, res) {
@@ -307,7 +400,9 @@ app.get('/wirelessComms', function (req, res) {
 });
 
 app.get('/javascripts/formulas', function (req, res) {
-	res.sendFile(path.join(__dirname + 'javascripts' + 'formulas.js'));
+	const api = process.env.API_KEY;
+	console.log('api = ' + api);
+	res.sendFile(path.join(__dirname + 'javascripts' + 'formulas.js'), { api: process.env.API_KEY });
 });
 
 app.listen(3000, function () {

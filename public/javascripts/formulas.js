@@ -54,7 +54,6 @@ window.addEventListener('load', () => {
 				long +
 				'&appid=' +
 				api;
-			console.log(base);
 
 			// FETCH INFO FROM API TO JSON AND GET INFO FROM JSON
 			fetch(base)
@@ -62,7 +61,6 @@ window.addEventListener('load', () => {
 					return res.json();
 				})
 				.then((data) => {
-					console.log(data);
 					const { temp, temp_max, temp_min } = data.main;
 					const place = data.name;
 					const { description, icon } = data.weather[0];
