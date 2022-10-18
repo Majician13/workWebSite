@@ -45,7 +45,7 @@ function makeNewConnection(uri) {
 }
 
 // DATABASE CONNECTION
-const estesdb = 'mongodb://localhost:27017/estes';
+const estesdb = 'mongodb+srv://majician13:MindGames13@estesdb.xyegpkx.mongodb.net/estes';
 
 // USER SCHEMA
 const userSchema = new mongoose.Schema({
@@ -282,6 +282,7 @@ app.post('/search', function (req, res) {
 		.exec(function (err, foundSite) {
 			console.log('DB is ' + mongoose.connection.readyState);
 			console.log('form = ' + form);
+			console.log('foundsite = ' + foundSite);
 			console.log('foundSite length = ' + foundSite.length);
 			if (foundSite.length === 1) {
 				res.render('search', { newSearch: foundSite, customerName: customerName });
