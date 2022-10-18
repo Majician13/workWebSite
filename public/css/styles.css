@@ -174,3 +174,9 @@ footer {
 .bodyTable {
 	top: 0;
 }
+
+.editButton {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+}

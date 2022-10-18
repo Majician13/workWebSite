@@ -10,10 +10,12 @@
 	<img src="/public/images/saia.png" alt="SAIA Logo" />
 	<% } %> <% newSearch.forEach(function(item){ %>
 
+	<div class="editButton">
+		<a class="btn btn-light btn-lg" href="editSite" role="button">Edit Site</a>
+	</div>
+
 	<div class="items" id="itemHeader">
 		<h1><%= item.terminalName %> #<%= item.terminalNum %> <%= item.AlphaCode %></h1>
-
-		<a class="btn btn-light btn-lg" href="editSite" role="button">Edit Site</a>
 
 		<div class="<%= item.AlphaCode %>" id="<%= item.AlphaCode %>" name="<%= item.AlphaCode %>">
 			<div class="card card-body">
