@@ -45,13 +45,21 @@ function makeNewConnection(uri) {
 }
 
 // DATABASE CONNECTION
-const estesdb = 'mongodb+srv://majician13:MindGames13@estesdb.xyegpkx.mongodb.net/estes';
+
+const estesdb =
+	'mongodb+srv://' +
+	process.env.ATUSERNAME +
+	':' +
+	process.env.PASSWORD +
+	'@estesdb.xyegpkx.mongodb.net/' +
+	process.env.DBNAME;
 
 // USER SCHEMA
 const userSchema = new mongoose.Schema({
 	email: String,
 	password: String,
 	admin: String,
+	approved: String,
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -398,12 +406,6 @@ app.get('/loopbackTest', function (req, res) {
 
 app.get('/wirelessComms', function (req, res) {
 	res.render('wirelessComms');
-});
-
-app.get('/javascripts/formulas', function (req, res) {
-	const api = process.env.API_KEY;
-	console.log('api = ' + api);
-	res.sendFile(path.join(__dirname + 'javascripts' + 'formulas.js'), { api: process.env.API_KEY });
 });
 
 app.listen(3000, function () {
